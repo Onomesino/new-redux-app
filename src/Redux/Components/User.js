@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import { editUser, deleteUser } from "../slices/UserSlices";
 import { useDispatch } from "react-redux";
-
+//import Style from './Style.css';
 
 const User = (props) => {
   const { user } = props;
@@ -41,9 +41,9 @@ const User = (props) => {
 
   return (
     <div>
-      <Modal show={showModal} onHide={handleModal}>
+      <Modal show={showModal} onHide={handleModal} id="modal">
         <Modal.Header closeButton>
-          <Modal.Title>Edith User </Modal.Title>
+          <Modal.Title><h1>Edith User</h1></Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <form>
@@ -72,7 +72,7 @@ const User = (props) => {
         </Modal.Footer>
       </Modal>
 
-      <h1>{user.name}</h1>
+      <h2>{user.name}</h2>
       <h3>{user.email}</h3>
 
       <Button onClick={handleModal}>Edit</Button>

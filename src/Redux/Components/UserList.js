@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import User from "./User";
+//import Style from './Style.css';
 
 const UserList = () => {
   const state = useSelector((state) => {

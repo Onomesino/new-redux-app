@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
 import { useDispatch } from "react-redux";
 import { addUser } from "../slices/UserSlices";
+import { Button } from "react-bootstrap";
+//import Style from "./Style.css";
 
 const UserForm = () => {
   const dispatch = useDispatch();
@@ -26,8 +28,10 @@ const UserForm = () => {
   return (
     <div>
       <h1>User List</h1>
-      <form onSubmit={handleSubmit}>
-        <label>Name</label>
+      <form onSubmit={handleSubmit} className="form">
+        <label>
+          Name <span>*</span>
+        </label>
         <input
           placeholder="Enter Your Name"
           value={name}
@@ -36,7 +40,9 @@ const UserForm = () => {
           }}
         />
         <br />
-        <label>Email</label>
+        <label className="email">
+          Email <span>*</span>
+        </label>
         <input
           type="email"
           placeholder="Enter Your email"
@@ -46,7 +52,8 @@ const UserForm = () => {
           }}
         />
         <br />
-        <input type="submit" />
+        {/* <input type="submit" /> */}
+        <Button type="submit">submit</Button>
       </form>
     </div>
   );

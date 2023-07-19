@@ -2,6 +2,7 @@
 import UserForm from "./Redux/Components/UserForm";
 import UserList from "./Redux/Components/UserList";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Style from './Style.css';
 
 function App() {
   return (
